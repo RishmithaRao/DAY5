@@ -1,0 +1,35 @@
+Prompts:
+#1) please provide steps in binary sort & binary search and further write steps for each research methods
+#2) Please create a flowchart representing the steps for carrying out  binary sort & binary search, incorporating the above steps. Ensure that related steps are placed side by side.
+#3) Please write Mermaid code for this
+
+//copy mermaid code and paste in draw.io
+create file 
+check add symbol and go to advance click mermaid 
+paste the mermaid code from chatgpt subgraph Binary_Search
+
+
+        A1[Start] --> B1[Set left to 0 and right to length-1]
+        B1 --> C1{Is left <= right?}
+        C1 --> |Yes| D1[Find middle element]style D fill:#f9f,stroke:#333,stroke-width:4px
+click ok.
+        D1 --> E1{Is middle element == target?}
+        E1 --> |Yes| F1[Return index]
+        E1 --> |No| G1{Is middle element > target?}
+        G1 --> |Yes| H1[Set right to middle-1]
+        G1 --> |No| I1[Set left to middle+1]
+        H1 --> B1
+        I1 --> B1
+        C1 --> |No| J1[Target not found, return -1]
+        J1 --> K1[End]
+    end
+
+    subgraph Binary_Insertion_Sort
+        A2[Start] --> B2[Iterate from 1 to length-1]
+        B2 --> C2[Current element at index i]
+        C2 --> D2[Use binary search to find correct position]
+        D2 --> E2[Shift elements from found position to i]
+        E2 --> F2[Insert current element at found position]
+        F2 --> B2
+        B2 --> G2[End]
+    end
